@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Creator's Page</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script|Homemade+Apple|Indie+Flower|Long+Cang&display=swap">
+</head>
+
+<body>
+	<header> 
+		<h1> 
+			Daily Postcard Creator
+		</h1>
+	</header>
+
+	<main> 
+    
+		<div id="postcard"> 
+      <div id = "leftSide">
+        <div class="imageWrapper">
+				  <img id="serverImage"/>
+			  </div>
+			  <div id="controls">
+				  <label id = "label" for="fileChooser">Choose Image</label>
+				  <input type="file" id="fileChooser" accept="image/png, .jpeg, .jpg, image/gif">
+			  </div>
+      </div>
+			<div id="message" placeholder="Write your message here!" contenteditable="true"></div>
+		</div>
+
+		<div id="editablePart">
+			<div id="fonts">
+				<h2>
+					Choose your font
+				</h2>
+				<ul> 
+					<li id="indieFlower" onclick="changeFont('indieFlower')">Indie Flower</li>
+					<li id="dancingScript" onclick="changeFont('dancingScript')">Dancing Script</li>
+					<li id="longCang" onclick="changeFont('longCang')">Long Cang</li>
+					<li id="homemadeApple" onclick="changeFont('homemadeApple')">Homemade Apple</li>
+				</ul>
+			</div>
+			<div>
+				<h2> 
+					Choose your color
+				</h2>
+				<div class="squareContainer1">
+					<span id="square1" class = "square" onclick="changeColor('square1')"> </span>
+					<span id="square2" class = "square" onclick="changeColor('square2')"> </span>
+					<span id="square3" class = "square" onclick="changeColor('square3')"> </span>
+					<span id="square4" class = "square" onclick="changeColor('square4')"> </span>
+					<span id="square5" class = "square" onclick="changeColor('square5')"> </span> 
+				 
+					<span id="square6" class = "square" onclick="changeColor('square6')"> </span>
+					<span id="square7" class = "square" onclick="changeColor('square7')"> </span>
+					<span id="square8" class = "square" onclick="changeColor('square8')"> </span>
+					<span id="square9" class = "square" onclick="changeColor('square9')"> </span>
+				</div>
+			</div>
+			<div>
+				<button id="sharePostcard">Share Postcard</button>
+			</div>
+		</div>
+
+	</main>
+	<script src="./creator-script.js"></script>
+</body>
+
+</html>

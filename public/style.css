@@ -1,0 +1,354 @@
+html, body {
+	display: flex; 
+	flex-direction: column;
+	height: 100%;
+}
+main {
+	flex-grow: 1;
+}
+h1 {
+	font-family: 'Dancing Script', cursive;
+	font-size: 40px;
+	margin: 20px;
+}
+#postcard {
+	border-radius: 20px;
+}
+#fileChooser {
+	border-style: dashed;
+}
+input#fileChooser {
+	display: none;
+}
+
+[contenteditable="true"]:empty:before {
+  content: attr(placeholder);
+  pointer-events: none;
+}
+
+h2 {
+	font-family: sans-serif;
+	font-size: 20px;
+}
+ul li:before {
+	content: "\25C7";
+	padding-right: 10px;
+}
+ul li.active:before {
+	content: "\2756";
+	padding-right: 10px;
+}
+#indieFlower {
+	cursor: pointer;
+	font-family: 'Indie Flower';
+	font-size: 18px;
+	padding-bottom: 5px;
+}
+#dancingScript {
+	cursor: pointer;
+	font-family: 'Dancing Script';
+	font-size: 18px;
+	padding-bottom: 5px;
+}
+#longCang {
+	cursor: pointer;
+	font-family: 'Long Cang';
+	font-size: 18px;
+	padding-bottom: 8px;
+}
+#homemadeApple {
+	cursor: pointer;
+	font-family: 'Homemade Apple';
+	padding-bottom: 5px;
+}
+/* classes to change font style */
+.indieFlower {
+	font-family: 'Indie Flower', sans-serif;
+}
+.dancingScript {
+	font-family: 'Dancing Script', sans-serif;
+}
+.longCang {
+	font-family: 'Long Cang', sans-serif;
+}
+.homemadeApple {
+	font-family: 'Homemade Apple', sans-serif;
+}
+
+.squareContainer1 {
+	display: flex;
+}
+.squareContainer2 {
+	display: flex;
+}
+.chosenSquare {
+	border: solid 2px black;
+}
+.square:hover {
+	border: 2px dashed black;
+}
+#square1 {
+	background: #e6e2cf;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+#square2 {
+	background: #dbcaac;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+#square3 {
+	background: #c9cbb3;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+#square4 {
+	background: #bbc9ca;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+#square5 {
+	background: #a6a5b5;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+#square6 {
+	background: #b5a6ab;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+#square7 {
+	background: #eccfcf;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+#square8 {
+	background: #eceeeb;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+#square9 {
+	background: #bab9b5;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+
+/* classes to change the color of postcard */
+.square1 {
+	background: #e6e2cf;
+}
+.square2 {
+	background: #dbcaac;
+}
+.square3 {
+	background: #c9cbb3;
+}
+.square4 {
+	background: #bbc9ca;
+}
+.square5 {
+	background: #a6a5b5;
+}
+.square6 {
+	background: #b5a6ab;
+}
+.square7 {
+	background: #eccfcf;
+}
+.square8 {
+	background: #eceeeb;
+}
+.square9 {
+	background: #bab9b5;
+}
+#sharePostcard {
+	font-size: 18px;
+	font-weight: bold;
+	background-color: white;
+	border: 2px solid black;
+	padding: 8px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+/* tablet and desktop view */
+@media (min-width: 601px) {
+  main {
+		align-self: center;
+	}
+	#postcard {
+    display: flex;
+    padding: 20px;
+		margin: auto;
+		margin-top: 30px;
+		min-width: 600px;
+		max-width: 600px;
+		min-height: 350px;
+		max-height: auto;
+	}
+  #leftSide {
+     display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+    min-width: 50%;
+    max-width: 50%
+  }
+	.controls {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+  .newControls {
+    display: flex;
+    justify-content: center;
+  }
+  .chooseLabel {
+    font-family: sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    border: 2px dashed black;
+    padding-top: 50%;
+    padding-bottom: 50%;
+    padding-right: 40px;
+    padding-left: 40px;
+    text-align: center;
+  }
+  .replaceLabel {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid black;
+    padding: 8px;
+    padding-right: 20px;
+    padding-left: 20px; 
+  }
+  #imageWrapper {
+    max-width: 50%;
+  }
+  #serverImage {
+    min-width: 100%;
+    max-width: 100%;
+  }
+	#message {
+    border-left: 2px solid black;
+		padding-top: 10px;
+		min-width: 40%;
+    max-width: 40%;
+		padding-left: 20px;
+    line-height: 1.5;
+	}
+	h2 {
+		padding-bottom: 15px;
+	}
+	#editablePart {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 30px;
+		min-width: 640px;
+		max-width: 640px;
+	}
+	#fonts {
+		padding-right: 10px;
+	}
+  .squareContainer1 {
+	  display: flex;
+  	flex-direction: row;
+  	flex-wrap: wrap;
+    max-width: 260px;  
+  }
+	#sharePostcard {
+		margin-top: 40px;
+	}
+}
+
+/* mobile view */
+@media (max-width: 600px) {
+	#postcard {
+		display: flex;
+		flex-direction: column;
+		min-width: 85%;
+		max-width: 85%;
+		min-height: 400px;
+		max-height: auto;
+		padding: 20px;
+		margin: auto;
+		margin-top: 20px;
+	}
+	#leftSide { 
+    min-height: 50%;
+    max-height: 50%;
+	}
+	#imageWrapper {
+		max-width: 85%;
+	}
+	#serverImage {
+		min-width: 100%;
+		max-width: 100%;
+	}
+	.controls {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.newControls {
+		display: flex;
+		justify-content: center;
+    margin-bottom: 10px;
+	}
+	.chooseLabel { 
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px dashed black;
+    padding:  30% 80px;
+    text-align: center;
+	}
+	.replaceLabel {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid black;
+    padding: 8px;
+    padding-right: 20px;
+    padding-left: 20px; 
+    margin-top: 10px;	
+	}
+	#message { 
+    min-height: 175px;
+    max-height: 50%;
+    padding-top: 20px;
+    padding-left: 10px;
+	}
+	.messageBorder {
+		border-top: 2px solid black;
+	}
+	#editablePart {
+		margin-top: 30px;
+    margin-left: 10px;
+	}
+	h2 {
+		padding-bottom: 10px;
+		padding-top: 10px;
+	}
+  .squareContainer1 {
+	  display: flex;
+  	flex-direction: row;
+  	flex-wrap: wrap;
+  }
+  .mobileSquareChosen {
+    border: 2px solid black;
+  }
+	#sharePostcard {
+		margin-top: 30px;
+    margin-bottom: 30px;
+	}
+}
