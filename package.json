@@ -1,10 +1,15 @@
 {
+  "homepage": "https://jonscon.github.io/Daily-Postcard-Creator",
   "name": "assets.js",
   "version": "0.0.1",
   "description": "Assets.js library",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "express": "^4.17.3",
