@@ -40,7 +40,7 @@ app.use("/images", express.static('images'));
 
 // Next, if no path is given, assume we will look at the postcard creation page
 app.get("/", function (request, response) {
-  response.sendFile(__dirname + '/public/bow-acute-brother-creator.html');
+  response.sendFile(__dirname + '/public/index.html');
 });
 
 // Next, handle post request to upload an image
